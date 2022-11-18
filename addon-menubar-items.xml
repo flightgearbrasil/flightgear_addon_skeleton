@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- this file requires FlightGear version 2018.2 or newer -->
-<!-- 
-    2018-12 WARNING: 
-    PUI menu items must have a globally unique label to make bindings work 
-    correctly. Bindings of all items with the same label will be triggered
-    if any of them is selected from the menu.
--->
+
 <PropertyList>
     <meta>
         <file-type type="string">FlightGear add-on menu bar items</file-type>
@@ -15,7 +9,7 @@
         <menu>
             <label>Sample Addon</label>
             <enabled type="bool">true</enabled>
-            
+
             <item>
                 <label>Say hello</label>
                 <binding>
@@ -30,22 +24,32 @@
                     <dialog-name>addon-sample-dialog</dialog-name>
                 </binding>
             </item>
-            
-            <!-- 
+
+            <!--
             FOR DEVELOPMENT ONLY!
-            trigger reload of addon-main.nas 
+            trigger reload of addon-main.nas
             1) This item should be REMOVED for release versions.
             2) Ensure the label is unique
-            3) replace addon ID in <property> to match your addon
+            3) replace addon ID  to match your addon
             -->
+            <!-- for compatibility with FG Versions pre 2020.1
             <item>
                 <label>Reload Skeleton</label>
                 <binding>
                     <command>property-toggle</command>
                     <property>/addons/by-id/org.flightgear.addons.Skeleton/reload</property>
                 </binding>
-            </item> 
-            
+            </item>
+            -->
+            <!-- for FG Version >= 2020.1 use the fgcommand -->
+            <item>
+                <label>Reload Skeleton</label>
+                <binding>
+                    <command>addon-reload</command>
+                    <id>org.flightgear.addons.Skeleton</id>
+                </binding>
+            </item>
+
         </menu>
     </menubar-items>
 </PropertyList>

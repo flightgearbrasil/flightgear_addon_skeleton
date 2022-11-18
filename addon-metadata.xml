@@ -16,7 +16,7 @@
         <name type="string">Torsten Dreyer</name>
         <email type="string"></email>
         <url type="string"></url>
-      </author>      
+      </author>
       <author>
         <name type="string">Henning Stahlke</name>
         <email type="string"></email>
@@ -82,5 +82,34 @@
       <tag type="string">dummy</tag>
       <tag type="string">template</tag>
     </tags>
+
+    <localized>
+      <!-- If no specific translation is needed for the French territory (the
+           '-FR' part in 'fr-FR'), the following block (fr-FR element) should
+           be omitted. Indeed, the 'fr' element will be used as a fallback if
+           the preferred language is fr-FR, fr-BE, fr-CA, etc. and no matching
+           territory-specific translation is available. -->
+      <fr-FR>
+        <name type="string">Squelette (traduction spécifique fr-FR)</name>
+        <short-description type="string">
+          Modèle de greffon pour aider les nouveaux développeurs de greffons (traduction spécifique fr-FR).
+        </short-description>
+
+        <long-description type="string">
+          Ce greffon ne fait rien de particulier, mais vous pouvez l'utiliser comme point de départ pour l'écriture d'un greffon destiné à FlightGear (traduction spécifique fr-FR).
+        </long-description>
+      </fr-FR>
+
+      <fr>
+        <name type="string">Squelette</name>
+        <short-description type="string">
+          Modèle de greffon pour aider les nouveaux développeurs de greffons.
+        </short-description>
+
+        <long-description type="string">
+          Ce greffon ne fait rien de particulier, mais vous pouvez l'utiliser comme point de départ pour l'écriture d'un greffon destiné à FlightGear.
+        </long-description>
+      </fr>
+    </localized>
   </addon>
 </PropertyList>

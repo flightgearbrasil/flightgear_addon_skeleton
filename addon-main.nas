@@ -44,5 +44,5 @@ var unload = func(addon) {
 }
 
 var main = func(addon) {
-  printlog("alert", "Skeleton addon initialized from path ", addon.basePath);
+  logprint(LOG_INFO, "Skeleton addon initialized from path ", addon.basePath);
 }
